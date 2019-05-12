@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<script> /*script to change the stylesheet in differant browsers*/
+		if(navigator.userAgent.indexOf("MSIE")!=-1)
+			{
+			document.write("<link rel='stylesheet' type='text/css' href='bhutan2.css'>");
+			}
+		if(navigator.userAgent.indexOf("MSIE")!=-1)
+			{
+			document.write("<link rel='stylesheet' type='text/css' href='bhutan1.css'>";
+			}
+
+	</script>
+		<link  rel="stylesheet"  type="text/css"  href="bhutan.css" />
+	<script> /*script for the clock*/
+		function disptime() {      
+			now=new Date();
+			h=now.getHours();
+			m=now.getMinutes();
+			s=now.getSeconds();
+			h=h<10?"0"+h:h
+			m=m<10?"0"+m:m
+			s=s<10?"0"+s:s
+			document.getElementById("clock1").innerHTML="<p>"+h+":"+m+":"+s+"</p>";
+			milli=now.getTime();
+			millib=milli+(6*60*60*1000);
+		
+			btime=new Date();
+			btime.setTime(millib);
+			hb=btime.getHours();
+			document.getElementById("clock2").innerHTML="<p>"+hb+":"+m+":"+s+"</p>";
+			setTimeout("disptime()",1000); 
+		}
+	</script>
+	<script> /*Script to produce greeting*/
+		var name=prompt("What is your name, traveller?");
+		var age=prompt("And what is your age? , "+ name + ", be truthful now!");
+		function Greet(who) {
+			alert("Greetings, "+who);
+		}
+	</script>
+</head>
+<body>
+
+<header>
+	<h1>Bhutan<h1>
+</header>
+
+<nav> 
+	<ul><a href="home.html">Home</a></ul>
+	<ul><a href="happiness.html">Gross National Happiness</a></ul>
+	<ul><a href="rule.html">The Changing Face of Rule in Bhutan</a></ul>
+	<ul><a href="health.html">Bhutan's Health, Education and Economy</a></ul>
+	<ul><a href="culture.html">Religion and Culture in Bhutan</a></ul>
+	<ul><a href="contact.html">Contact us</a></ul>
+</nav>
+
+<section> <!--list of facts-->
+		<h1>Druk Yul, “land of the thunder dragon”</h1>
+		<h1>Fast Facts about Bhutan</h2>
+		<li>The export of hydroelectricity to India provides 32% of government revenue</li>
+		<li>Number of tourists visiting Bhutan in 2005: 13,600</li>
+		<li>Human Development Index ranking: 134 out of 177 countries</li>
+		<li>Percentage of population involved in agriculture: 69%</li>
+		<li>Tourism is the third largest provider of foreign exchange in Bhutan, earning it US$18.5 million in 2005</li>
+		<li>Area of bhutan: 38, 392 sq km – similar size to Switzerland</li>
+		<li>Population: 634, 982 as of the 2005 Census</li>
+		<li>Life expectancy: 63</li> 
+		<li>Percentage of Bhutan’s land used for agriculture: 7.8%</li>
+		<li>Forest cover: 72.5%</li>
+
+	<div id="UKclock"> <!--clock onloads-->
+		<body onload="disptime()">
+		<p>UK Time<p>
+		<p id="clock1"></p>
+	</div>
+	<div id="Bclock">
+		<p>Bhutan Time<p>
+		<p id="clock2"></p>
+	</div>
+
+	<div id="greeting"><!--div to hold the greeting script--> 
+		<script>
+			Greet(name);
+			document.write("<H2>On your next birthday, "+name+", you will be "+ ++age +".<br>");
+		</script>
+			<h2>You could treat yourself to a birthday to remember - in Bhutan!</h2>
+			<h2>Our special birthday tours start from as little as £2,500 for seven days of unforgettable forest, majestic mountains, crystal clear air.  Don't miss out!  Call us now on 08000 778899!</h2>
+	</div>
+
+</section>
+
+<article>
+	<img src="bhutan map of region.png"  width="100%"  height="24%"  title="Bhutan map">
+	</br>
+	<img src="bhutanflag.png"  width="100%"  height="24%"  title="Bhutan flag">
+	</br>
+	<img src="bird.jpg"  width="100%"  height="24%"  title="Bhutan traditional bird">
+	</br>
+	<img src="symbol.jpg"  width="100%"  height="24%"   title="Bhutan traditional symbol">
+</article>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

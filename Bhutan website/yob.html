@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Age this year</title>
+</head>
+<body>
+
+<h2>The date today is:</h2><br>
+
+<script type="text/javascript">
+
+now=new Date();
+d=now.getDate();
+m=now.getMonth()+1;
+y=now.getFullYear();
+
+d=d<10?"0"+d:d;
+m=m<10?"0"+m:m;
+
+document.write(d+"/"+m+"/"+y);
+yob=prompt("Enter your year of birth");
+
+age=y-yob;
+
+document.write("<br><h2>This year you are "+age+".</h2><br>");
+
+if (age>=65) {
+
+	document.write("You're in the over 65 age range. Try this <a href='http://travel.saga.co.uk'>link</a>");}
+
+	else if (age>=45) {
+
+	document.write("You're in the 45-65 age range.");}
+
+	else if (age>=20) {
+
+	document.write("You're in the 20-45 age range.");}
+
+	else {
+
+	document.write("You're under 20.");}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>contact us</title>
+	<link  rel="stylesheet"  type="text/css"  href="bhutan.css" />
+
+	<script type="text/javascript"> /*Random number generation*/
+    	function display() {                           
+    		DispWin = window.open(' ','NewWin', 'toolbar=no,status=no,width=300,height=200');
+    		document.title
+    		num=prompt("Enter a number between 1 and 10");
+    		var x=(Math.floor((Math.random()*10)+1));
+     		if(num==x){
+    			DispWin.document.write("Congratulations, your number is correct, you have been given a chance to win a holiday to Bhutan in our prize draw.");
+   			}else{ 
+    			DispWin.document.write("I'm afraid that " + num + " is not today's lucky number and you will not be added to our prize draw.");
+    		}
+    		document.write(message);
+			}
+	</script>
+
+	<script> /*form validation*/
+	function validate() {
+     if (document.contactfrm.comment.value=="" && document.contactfrm.luxury.checked==false && document.contactfrm.family.checked==false && document.contactfrm.young.checked==false && document.contactfrm.newsletter.checked==false) {
+     	 alert("Error, it seems you have not selected a brochure, to join up a newsletter or write a comment to us, please select one");
+     	 return false;
+    }
+     return true;
+ 	}
+</script>
+
+</head>
+<body>
+<header>
+<h1>contact us</h1>
+</header>
+<Nav>
+	<ul><a href="home.html">Home</a></ul>
+	<ul><a href="happiness.html">Gross National Happiness</a></ul>
+	<ul><a href="rule.html">The Changing Face of Rule in Bhutan</a></ul>
+	<ul><a href="health.html">Bhutan's Health, Education and Economy</a></ul>
+	<ul><a href="culture.html">Religion and Culture in Bhutan</a></ul>
+	<ul><a href="contact.html">Contact us</a></ul>
+</Nav>
+<section>
+
+<div id="contact">
+<form name="contactfrm" action="mailto:AdamP7753@colchester.ac.uk" enctype="text/plain"
+ method="POST" onSubmit="return validate()">
+
+	<table>
+		<tr>
+			<td>Title:</td>
+			<td>
+				<select>
+					<option value=="" selected></option>
+					<option value="Mr">Mr</option>
+					<option value="Mrs">Mrs</option>
+					<option value="Ms">Ms</option>
+					<option value="Miss">Miss</option>
+					<option value="Dr">Dr</option>
+					<option value="Prof">Prof</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>First name*:</td>
+			<td><input type="text" name="firstname" size ="20" maxlength="20" id="firstname" required></td>
+			<td>Surname*:</td>
+			<td><input type="text" name="surname" size ="20" maxlength="20" id="surname" required></td>
+		</tr>
+				<tr>
+			<td>Address*:</td>
+			<td><input type="text" name="address" size ="20" maxlength="20" id="address" required></td>
+			<td><p>brochure</p></td>
+		</tr>
+		<tr>
+			<td>Town*:</td>
+			<td><input type="text" name="town" size ="20" maxlength="20" id="town" required></td>
+			<td>Luxury</td>
+			<td><input type="checkbox" name="luxury" value"luxury"</td>
+			
+		</tr>
+		<tr>
+			<td>County*:</td>
+			<td><input type="text" name="county" size ="20" maxlength="20" id="county" required></td>
+			<td>Family</td>
+			<td><input type="checkbox" name="family" value"family"</td>
+		</tr>
+		<tr>
+			<td>Postcode*:</td>
+			<td><input type="text" name="postcode" size ="20" maxlength="8" id="surname" required></td>
+			<td>18-30</td>
+			<td><input type="checkbox" name="young" value"18-30"</td>
+		</tr>
+		<tr>
+			<td>Email*:</td>
+			<td><input type="email" name="email" size="40" required></td>
+		</tr>
+		<tr>
+			<td>Phone number:</td>
+			<td><input type="text" name="phone number" size ="20" maxlength="12" id="phone number"></td>
+			<td>would you like to receive our newsletter?</td>
+			<td><input type="checkbox" name="newsletter" value"newsletter"</td>
+		</tr>
+		<tr>
+			<td>comment:</td>
+		</tr>
+		<tr>
+			<td colspan="2"><textarea name="comment" rows="4"cols="50" ></textarea></td>
+			<td><input type="Button" value="  Quiz  " onClick="display()"</td>
+			<td>press the 'quiz' button for a chance to enter our prize draw of an all expenses paid holiday to Bhutan</td> 
+		
+		</tr>
+		<tr>
+			<td colspan="2">
+			<td><input type="submit" name="submit" value="Submit"></td>
+
+		</tr>
+
+	</table>
+	</form>
+	</div>
+</section>
+<article>
+</article>
+<footer>
+</footer>
+</body>
+</html>
